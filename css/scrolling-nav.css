@@ -31,6 +31,28 @@ html {
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
 of those sections to manage the look and feel of the site. */
 
+
+// Examples css
+.tab-content>.active {
+    display: block;
+}
+
+.tab-pane {
+	max-height: 550px;
+	overflow: scroll;
+	background: #fff;
+	text-align: left;	
+
+}
+.tab-pane pre {
+	background: #fff;
+	text-align: left;	
+
+	
+}
+
+
+
 .navbar {
 	background-color: white;
 }
@@ -41,6 +63,7 @@ of those sections to manage the look and feel of the site. */
 .btn-label {
 	padding-left: 5px;
 }
+
 	
 .logo {
   background-image: url('../img/logo.png') ;
@@ -54,14 +77,14 @@ of those sections to manage the look and feel of the site. */
 }
 
 .intro-section {
-    height: 100%;
+    min-height: 400px;
     padding-top: 100px;
     text-align: center;
     background: #fff;
 }
 
 .examples-section {
-    height: 100%;
+    min-height: 800px;
     padding-top: 60px;
     text-align: center;
     background: #eee;
@@ -80,3 +103,17 @@ of those sections to manage the look and feel of the site. */
     text-align: center;
     background: #eee;
 }
+
+
+
+//Example css from Jim
+
+body { font-family: "Open Sans", Helvetica, sans-serif; }
+h1, h2, h3, h4, h5 { font-family: Roboto, Helvetica, Arial, sans-serif; font-weight: 300; font-style: normal; }
+ul { list-style-type: none; }
+table { table-layout: fixed; word-wrap: break-word; } th { background-color: #888; color: #fff; }
+
+.collaboration-github-panel {
+	min-height: 200px;
+}
+
