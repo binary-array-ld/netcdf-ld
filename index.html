@@ -1,42 +1,127 @@
-<!doctype html>
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>netCDF-LD by binary-array-ld</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
+    <title>netCDF-LD</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>netCDF-LD</h1>
-        <p>netCDF-LD</p>
 
-        <p class="view"><a href="https://github.com/binary-array-ld/netcdf-ld">View the Project on GitHub <small>binary-array-ld/netcdf-ld</small></a></p>
+</head>
 
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
-        <ul>
-          <li><a href="https://github.com/binary-array-ld/netcdf-ld/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/binary-array-ld/netcdf-ld/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/binary-array-ld/netcdf-ld">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>
-<a id="welcome-to-netcdf-ld" class="anchor" href="#welcome-to-netcdf-ld" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to netCDF-LD</h1>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/binary-array-ld">binary-array-ld</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><div class="logo"></div></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#examples">Examples</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contribute">Contribute</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>netCDF-LD</h1>
+                    <p>netCDF-LD is an approach for constructing <a href="https://en.wikipedia.org/wiki/Linked_data">Linked Data</a> descriptions using the metadata and structures found in netCDF files.
+					
+					Linked Data is a method of publishing structured data on the web so that it can be interlinked and become more useful through semantic queries. It uses the W3 Resource Description Framework (RDF) standard to express the information and relationships.
+					</p>
+					<p>netCDF-LD enhances netCDF metadata, enabling information found in netCDF files to be linked with published conventions and controlled vocabularies used to express the content.
+					</p>
+					
+
+					</p>
+                    <a class="btn btn-default page-scroll" href="https://github.com/binary-array-ld"><span class="fa fa-github"></span><span class="btn-label">View on Github repo</span></a>
+
+					<a class="btn btn-default page-scroll" href="#examples">Examples</a>
+					
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="examples" class="examples-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Examples</h1>
+					<p><a href="examples/avhrr-only-v2.19810901_a.html">examples/avhrr-only-v2.19810901_a.html</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="contribute" class="contribute-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Contribute</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+
+</body>
+
 </html>
