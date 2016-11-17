@@ -66,13 +66,14 @@ of those sections to manage the look and feel of the site. */
 
 	
 .logo {
-  background-image: url('../img/logo.png') ;
+  background-image: url('../img/logo-alt.png') ;
+  /*background-image: url('../img/logo.png') ;*/
   background-size: 180px;
   margin-top: -10px;
   
 
   width: 180px;
-  height: 45px;
+  height: 40px;
   display: inline-block;
 }
 
