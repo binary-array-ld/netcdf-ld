@@ -363,7 +363,51 @@ variables:
     
   
 	<div role="tabpanel" class="tab-pane" id="rdf-turtle">
-	   TBA
+	   <p> RDF encoding </p>
+	<pre>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cf: <http://cf-conventions.org/def/1.6.0/> .
+@prefix acdd: <http://www.unidata.ucar.edu/netcdf/def/acdd/1.0/> .
+@prefix ncld: <http://binary-array-ld.net/latest/> .
+@prefix cf-parameter: <http://mmisw.org/ont/cf/parameter/> .
+
+
+_:avhrr-only-v2.19810901_a.nc a ncld:Container ; 
+    acdd:Conventions "CF-1.0" ;
+    acdd:title "Daily-OI-V2, final, Data (Ship, Buoy, AVHRR, GSFC-ice)" ;
+    ncld:contains _:sst, _:anom, _:err, _:ice .
+
+
+_:sst a ncld:Array ;
+    rdfs:label "Daily sea surface temperature" ; 
+    cf:long_name "Daily sea surface temperature" ;
+    cf:units "degrees_C" ;
+    cf:valid_min "-300s" ;
+    cf:valid_max "4500s" ;
+    cf:standard_name cf-parameter:sea_surface_temperature .
+
+
+_:anom a ncld:Array ;
+    cf:long_name "Daily sea surface temperature anomalies" ;
+    cf:units "degrees C" ;
+    cf:valid_min "-1200s" ;
+    cf:valid_max "1200s" .
+
+
+_:err a ncld:Array ;
+    cf:long_name "Estimated error standard deviation of analysed_sst" ;
+    cf:units "degrees C" ;
+    cf:valid_min "0s" ;
+    cf:valid_max "1000s" .
+	
+_:ice a ncld:Array;
+    cf:long_name "Sea ice concentration" ;
+    cf:units "percentage" ;
+    cf:valid_min "0s" ;
+    cf:valid_max "100s" .
+</pre>
 	</div>
   </div>
 
