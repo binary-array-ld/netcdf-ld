@@ -26,3 +26,14 @@ The netCDF-LD working group is currently working on a candidate specification us
 The current activity features two parts: 1) A way to scan existing netCDF files that use CF and ACDD and generate RDF statements. 2) A way to specify other vocabularies and schemas so that RDF statements can be generated linking the data to many metadata systems.
 
 We are currently working on a set of conventions to define prefixes and aliases and rules for their use that allow URIs to be layered over existing netCDF file metadata, providing Linked Data views on the file contents.
+
+Our landing page is found [here](https://binary-array-ld.github.io/netcdf-ld/).
+
+netCDF-LD is being developed by the a working group consisting of members of CSIRO, UK Met Office, NOAA, NCI, Geoscience Australia and others. The working group is contributing to a stream of activity under the [Advancing netCDF-CF for the Geoscience Community](https://www.earthcube.org/content/advancing-netcdf-cf-geoscience-community) (or see the [Github repo wiki](https://github.com/Unidata/EC-netCDF-CF/wiki)). Participation is open to the public. There is a set of relevant Github repositories and is the main collaboration site for this work.
+
+
+### Credits
+
+(Alphabetical order) Jim Biard (NOAA), Nicholas Car (GA), Simon Cox (CSIRO), Ethan Davis (UCAR), Kelsey Druken (NCI), Mark Hedley (UK Met. Office), Alex Ip (GA), Adam Leadbetter (Marine Inst.), Jonathan Yu (CSIRO)
+
+Acknowledgements to those who contributed: Stefano Nativi, and Aaron Sweeney.
