@@ -1,0 +1,67 @@
+{
+  "@context": {
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "ex": "http://example.org/vocab#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ncld": "http://binary-array-ld.net/latest/",
+    "cf": "http://cf-conventions.org/def/1.6.0/",
+    "acdd": "http://www.unidata.ucar.edu/netcdf/def/acdd/1.0/"
+  },
+  "@graph": [
+    {
+      "@type": "ncld:Container",
+      "ncld:contains": [
+        {
+          "@id": "_:sst"
+        },
+        {
+          "@id": "_:anom"
+        },
+        {
+          "@id": "_:err"
+        },
+        {
+          "@id": "_:ice"
+        }
+      ],
+      "acdd:Conventions": "CF-1.0",
+      "acdd:title": "Daily-OI-V2, final, Data (Ship, Buoy, AVHRR, GSFC-ice)"
+    },
+    {
+      "@id": "_:sst",
+      "@type": "ncld:Array",
+      "cf:long_name": "Daily sea surface temperature",
+      "cf:standard_name": {
+        "@id": "http://mmisw.org/ont/cf/parameter/sea_surface_temperature"
+      },
+      "cf:units": "degrees_C",
+      "cf:valid_max": "4500s",
+      "cf:valid_min": "-300s",
+      "http://www.w3.org/2000/01/rdf-schema#label": "Daily sea surface temperature"
+    },
+    {
+      "@id": "_:anom",
+      "@type": "ncld:Array",
+      "cf:long_name": "Daily sea surface temperature anomalies",
+      "cf:units": "degrees C",
+      "cf:valid_max": "1200s",
+      "cf:valid_min": "-1200s"
+    },
+    {
+      "@id": "_:err",
+      "@type": "ncld:Array",
+      "cf:long_name": "Estimated error standard deviation of analysed_sst",
+      "cf:units": "degrees C",
+      "cf:valid_max": "1000s",
+      "cf:valid_min": "0s"
+    },
+    {
+      "@id": "_:ice",
+      "@type": "ncld:Array",
+      "cf:long_name": "Sea ice concentration",
+      "cf:units": "percentage",
+      "cf:valid_max": "100s",
+      "cf:valid_min": "0s"
+    }
+  ]
+}
