@@ -80,6 +80,7 @@ of those sections to manage the look and feel of the site. */
 .intro-section {
     min-height: 400px;
     padding-top: 100px;
+	padding-bottom: 20px;
     text-align: center;
     background: #fff;
 }
@@ -118,3 +119,19 @@ table { table-layout: fixed; word-wrap: break-word; } th { background-color: #88
 	min-height: 200px;
 }
 
+.what-is-netcdfld-img img{
+	display: block;
+    margin: auto;
+    width: 70%; 
+	padding-top: 20px;
+	padding-bottom: 20px;
+  /*background-image: url('../img/what-is-netCDF-LD.png') ;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  text-align: center; 
+  min-width: 200px;
+  min-height: 200px; 
+  */
+  
+  	
+}
