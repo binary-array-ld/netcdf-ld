@@ -17,172 +17,173 @@
         </style>
     </head>
     <body>
-        <ul class="file">
-            <li>netcdf avhrr-only-v2.19810901_a.nc {
-                <ul>
-                    <li>dimensions: // <a href="#dimensions_list" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                        <ul class="collapse in" id="dimensions_list">
-                            <li>time&nbsp;=&nbsp;1 ;</li>
-                            <li>zlev&nbsp;=&nbsp;1 ;</li>
-                            <li>lat&nbsp;=&nbsp;720 ;</li>
-                            <li>lon&nbsp;=&nbsp;1440 ;</li>
-                        </ul>
-                    </li>
-                    <li>variables: // <a href="#variables_list" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                        <ul class="collapse in" id="variables_list">
-                            <li id="variable_time">float&nbsp;time(time)&nbsp;; // <a href="#variable_time_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                                <ul class="collapse in" id="variable_time_attrs">
-                                    <li>time:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#long-name" target="_blank">long_name</a>&nbsp;=&nbsp;"Center time of the day"&nbsp;;
-                                    </li>
-                                    <li>time:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#days since 1978-01-01 00:00:00" target="_blank">"days since 1978-01-01 00:00:00"</a>&nbsp;;
-                                    </li>
-                                    <li>time:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#standard-name" target="_blank">standard_name</a>&nbsp;=&nbsp;<a href="http://mmisw.org/ont/cf/parameter/time" target="_blank">"time"</a>&nbsp;;
-                                    </li>
-                                    <li>time:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#coordinate-types" target="_blank">axis</a>&nbsp;=&nbsp;"T"&nbsp;;
-                                    </li>
-                                    <li>time:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#calendar" target="_blank">calendar</a>&nbsp;=&nbsp;"gregorian"&nbsp;;
-                                    </li>
-                                </ul>
-                            </li>
-                            <li id="variable_zlev">float&nbsp;zlev(zlev)&nbsp;; // <a href="#variable_zlev_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                                <ul class="collapse in" id="variable_zlev_attrs">
-                                    <li>zlev:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#long-name" target="_blank">long_name</a>&nbsp;=&nbsp;"Sea surface height"&nbsp;;
-                                    </li>
-                                    <li>zlev:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#meters" target="_blank">"meters"</a>&nbsp;;
-                                    </li>
-                                    <li>zlev:actual_range&nbsp;=&nbsp;"0, 0"&nbsp;;
-                                    </li>
-                                    <li>zlev:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#standard-name" target="_blank">standard_name</a>&nbsp;=&nbsp;<a href="http://mmisw.org/ont/cf/parameter/height" target="_blank">"height"</a>&nbsp;;
-                                    </li>
-                                    <li>zlev:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#coordinate-types" target="_blank">axis</a>&nbsp;=&nbsp;"Z"&nbsp;;
-                                    </li>
-                                </ul>
-                            </li>
-                            <li id="variable_lat">float&nbsp;lat(lat)&nbsp;; // <a href="#variable_lat_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                                <ul class="collapse in" id="variable_lat_attrs">
-                                    <li>lat:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#long-name" target="_blank">long_name</a>&nbsp;=&nbsp;"Latitude"&nbsp;;
-                                    </li>
-                                    <li>lat:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#degrees_north" target="_blank">"degrees_north"</a>&nbsp;;
-                                    </li>
-                                    <li>lat:grids&nbsp;=&nbsp;"Uniform grid from -89.875 to 89.875 by 0.25"&nbsp;;
-                                    </li>
-                                    <li>lat:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#standard-name" target="_blank">standard_name</a>&nbsp;=&nbsp;<a href="http://mmisw.org/ont/cf/parameter/latitude" target="_blank">"latitude"</a>&nbsp;;
-                                    </li>
-                                    <li>lat:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#coordinate-types" target="_blank">axis</a>&nbsp;=&nbsp;"Y"&nbsp;;
-                                    </li>
-                                </ul>
-                            </li>
-                            <li id="variable_lon">float&nbsp;lon(lon)&nbsp;; // <a href="#variable_lon_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                                <ul class="collapse in" id="variable_lon_attrs">
-                                    <li>lon:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#long-name" target="_blank">long_name</a>&nbsp;=&nbsp;"Longitude"&nbsp;;
-                                    </li>
-                                    <li>lon:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#degrees_east" target="_blank">"degrees_east"</a>&nbsp;;
-                                    </li>
-                                    <li>lon:grids&nbsp;=&nbsp;"Uniform grid from 0.125 to 359.875 by 0.25"&nbsp;;
-                                    </li>
-                                    <li>lon:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#standard-name" target="_blank">standard_name</a>&nbsp;=&nbsp;<a href="http://mmisw.org/ont/cf/parameter/longitude" target="_blank">"longitude"</a>&nbsp;;
-                                    </li>
-                                    <li>lon:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#coordinate-types" target="_blank">axis</a>&nbsp;=&nbsp;"X"&nbsp;;
-                                    </li>
-                                </ul>
-                            </li>
-                            <li id="variable_sst">short&nbsp;sst(time, zlev, lat, lon)&nbsp;; // <a href="#variable_sst_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                                <ul class="collapse in" id="variable_sst_attrs">
-                                    <li>sst:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#long-name" target="_blank">long_name</a>&nbsp;=&nbsp;"Daily sea surface temperature"&nbsp;;
-                                    </li>
-                                    <li>sst:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#degrees_C" target="_blank">"degrees_C"</a>&nbsp;;
-                                    </li>
-                                    <li>sst:<a href="http://www.unidata.ucar.edu/netcdf/docs/netcdf.html#Attribute-Conventions" target="_blank">_FillValue</a>&nbsp;=&nbsp;-999s&nbsp;;
-                                    </li>
-                                    <li>sst:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#packed-data" target="_blank">add_offset</a>&nbsp;=&nbsp;0.0f&nbsp;;
-                                    </li>
-                                    <li>sst:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#packed-data" target="_blank">scale_factor</a>&nbsp;=&nbsp;0.01f&nbsp;;
-                                    </li>
-                                    <li>sst:<a href="http://www.unidata.ucar.edu/netcdf/docs/netcdf.html#Attribute-Conventions" target="_blank">valid_min</a>&nbsp;=&nbsp;-300s&nbsp;;
-                                    </li>
-                                    <li>sst:<a href="http://www.unidata.ucar.edu/netcdf/docs/netcdf.html#Attribute-Conventions" target="_blank">valid_max</a>&nbsp;=&nbsp;4500s&nbsp;;
-                                    </li>
-                                    <li>sst:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#standard-name" target="_blank">standard_name</a>&nbsp;=&nbsp;<a href="http://mmisw.org/ont/cf/parameter/sea_surface_temperature" target="_blank">"sea_surface_temperature"</a>&nbsp;;
-                                    </li>
-                                </ul>
-                            </li>
-                            <li id="variable_anom">short&nbsp;anom(time, zlev, lat, lon)&nbsp;; // <a href="#variable_anom_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                                <ul class="collapse in" id="variable_anom_attrs">
-                                    <li>anom:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#long-name" target="_blank">long_name</a>&nbsp;=&nbsp;"Daily sea surface temperature anomalies"&nbsp;;
-                                    </li>
-                                    <li>anom:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#degrees C" target="_blank">"degrees C"</a>&nbsp;;
-                                    </li>
-                                    <li>anom:<a href="http://www.unidata.ucar.edu/netcdf/docs/netcdf.html#Attribute-Conventions" target="_blank">_FillValue</a>&nbsp;=&nbsp;-999s&nbsp;;
-                                    </li>
-                                    <li>anom:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#packed-data" target="_blank">add_offset</a>&nbsp;=&nbsp;0.0f&nbsp;;
-                                    </li>
-                                    <li>anom:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#packed-data" target="_blank">scale_factor</a>&nbsp;=&nbsp;0.01f&nbsp;;
-                                    </li>
-                                    <li>anom:<a href="http://www.unidata.ucar.edu/netcdf/docs/netcdf.html#Attribute-Conventions" target="_blank">valid_min</a>&nbsp;=&nbsp;-1200s&nbsp;;
-                                    </li>
-                                    <li>anom:<a href="http://www.unidata.ucar.edu/netcdf/docs/netcdf.html#Attribute-Conventions" target="_blank">valid_max</a>&nbsp;=&nbsp;1200s&nbsp;;
-                                    </li>
-                                </ul>
-                            </li>
-                            <li id="variable_err">short&nbsp;err(time, zlev, lat, lon)&nbsp;; // <a href="#variable_err_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                                <ul class="collapse in" id="variable_err_attrs">
-                                    <li>err:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#long-name" target="_blank">long_name</a>&nbsp;=&nbsp;"Estimated error standard deviation of analysed_sst"&nbsp;;
-                                    </li>
-                                    <li>err:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#degrees C" target="_blank">"degrees C"</a>&nbsp;;
-                                    </li>
-                                    <li>err:<a href="http://www.unidata.ucar.edu/netcdf/docs/netcdf.html#Attribute-Conventions" target="_blank">_FillValue</a>&nbsp;=&nbsp;-999s&nbsp;;
-                                    </li>
-                                    <li>err:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#packed-data" target="_blank">add_offset</a>&nbsp;=&nbsp;0.0f&nbsp;;
-                                    </li>
-                                    <li>err:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#packed-data" target="_blank">scale_factor</a>&nbsp;=&nbsp;0.01f&nbsp;;
-                                    </li>
-                                    <li>err:<a href="http://www.unidata.ucar.edu/netcdf/docs/netcdf.html#Attribute-Conventions" target="_blank">valid_min</a>&nbsp;=&nbsp;0s&nbsp;;
-                                    </li>
-                                    <li>err:<a href="http://www.unidata.ucar.edu/netcdf/docs/netcdf.html#Attribute-Conventions" target="_blank">valid_max</a>&nbsp;=&nbsp;1000s&nbsp;;
-                                    </li>
-                                </ul>
-                            </li>
-                            <li id="variable_ice">short&nbsp;ice(time, zlev, lat, lon)&nbsp;; // <a href="#variable_ice_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                                <ul class="collapse in" id="variable_ice_attrs">
-                                    <li>ice:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#long-name" target="_blank">long_name</a>&nbsp;=&nbsp;"Sea ice concentration"&nbsp;;
-                                    </li>
-                                    <li>ice:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#percentage" target="_blank">"percentage"</a>&nbsp;;
-                                    </li>
-                                    <li>ice:<a href="http://www.unidata.ucar.edu/netcdf/docs/netcdf.html#Attribute-Conventions" target="_blank">_FillValue</a>&nbsp;=&nbsp;-999s&nbsp;;
-                                    </li>
-                                    <li>ice:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#packed-data" target="_blank">add_offset</a>&nbsp;=&nbsp;0.0f&nbsp;;
-                                    </li>
-                                    <li>ice:<a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#packed-data" target="_blank">scale_factor</a>&nbsp;=&nbsp;0.01f&nbsp;;
-                                    </li>
-                                    <li>ice:<a href="http://www.unidata.ucar.edu/netcdf/docs/netcdf.html#Attribute-Conventions" target="_blank">valid_min</a>&nbsp;=&nbsp;0s&nbsp;;
-                                    </li>
-                                    <li>ice:<a href="http://www.unidata.ucar.edu/netcdf/docs/netcdf.html#Attribute-Conventions" target="_blank">valid_max</a>&nbsp;=&nbsp;100s&nbsp;;
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <br>
-                    <li>// global attributes: <a href="#attribute_list" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                        <ul class="collapse in" id="attribute_list">
-                            <li>:<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#Conventions" target="_blank">Conventions</a>&nbsp;=&nbsp;"CF-1.0"&nbsp;;
-                            </li>
-                            <li>:<a href="http://www.unidata.ucar.edu/netcdf/docs/netcdf.html#Attribute-Conventions" target="_blank">title</a>&nbsp;=&nbsp;"Daily-OI-V2, final, Data (Ship, Buoy, AVHRR, GSFC-ice)"&nbsp;;
-                            </li>
-                            <li>:History&nbsp;=&nbsp;"Version 2.0"&nbsp;;
-                            </li>
-                            <li>:creation_date&nbsp;=&nbsp;"2011-05-04"&nbsp;;
-                            </li>
-                            <li>:Source&nbsp;=&nbsp;"NOAA/National Climatic Data Center"&nbsp;;
-                            </li>
-                            <li>:Contact&nbsp;=&nbsp;"Dick Reynolds, email: Richard.W.Reynolds@noaa.gov & Chunying Liu, email: Chunying.liu@noaa.gov"&nbsp;;
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+        <p>netcdf avhrr-only-v2.19810901_a.nc {</p>
+        <ul>
+            <li>
+            <ul class="collapse in" id="group_global">
+                <li>dimensions: // <a href="#global_dimensions_list" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
+                    <ul class="collapse in" id="global_dimensions_list">
+                        <li>time&nbsp;=&nbsp;1 ;</li>
+                        <li>zlev&nbsp;=&nbsp;1 ;</li>
+                        <li>lat&nbsp;=&nbsp;720 ;</li>
+                        <li>lon&nbsp;=&nbsp;1440 ;</li>
+                    </ul>
+                </li>
+                <li>variables: // <a href="#global_variables_list" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
+                    <ul class="collapse in" id="global_variables_list">
+                        <li>float&nbsp;time(time)&nbsp;; // <a href="#global_variable_time_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
+                            <ul class="collapse in" id="global_variable_time_attrs">
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/long_name" target="_blank">long_name</a>&nbsp;=&nbsp;"Center time of the day"&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#days since 1978-01-01 00:00:00" target="_blank">"days since 1978-01-01 00:00:00"</a>&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/standard_name" target="_blank">standard_name</a>&nbsp;=&nbsp;<a href="http://mmisw.org/ont/cf/parameter/time" target="_blank">"time"</a>&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/axis" target="_blank">axis</a>&nbsp;=&nbsp;"T"&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/calendar" target="_blank">calendar</a>&nbsp;=&nbsp;"gregorian"&nbsp;;
+                                </li>
+                            </ul>
+                        </li>
+                        <li>float&nbsp;zlev(zlev)&nbsp;; // <a href="#global_variable_zlev_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
+                            <ul class="collapse in" id="global_variable_zlev_attrs">
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/long_name" target="_blank">long_name</a>&nbsp;=&nbsp;"Sea surface height"&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#meters" target="_blank">"meters"</a>&nbsp;;
+                                </li>
+                                <li>:actual_range&nbsp;=&nbsp;"0, 0"&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/standard_name" target="_blank">standard_name</a>&nbsp;=&nbsp;<a href="http://mmisw.org/ont/cf/parameter/height" target="_blank">"height"</a>&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/axis" target="_blank">axis</a>&nbsp;=&nbsp;"Z"&nbsp;;
+                                </li>
+                            </ul>
+                        </li>
+                        <li>float&nbsp;lat(lat)&nbsp;; // <a href="#global_variable_lat_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
+                            <ul class="collapse in" id="global_variable_lat_attrs">
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/long_name" target="_blank">long_name</a>&nbsp;=&nbsp;"Latitude"&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#degrees_north" target="_blank">"degrees_north"</a>&nbsp;;
+                                </li>
+                                <li>:grids&nbsp;=&nbsp;"Uniform grid from -89.875 to 89.875 by 0.25"&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/standard_name" target="_blank">standard_name</a>&nbsp;=&nbsp;<a href="http://mmisw.org/ont/cf/parameter/latitude" target="_blank">"latitude"</a>&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/axis" target="_blank">axis</a>&nbsp;=&nbsp;"Y"&nbsp;;
+                                </li>
+                            </ul>
+                        </li>
+                        <li>float&nbsp;lon(lon)&nbsp;; // <a href="#global_variable_lon_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
+                            <ul class="collapse in" id="global_variable_lon_attrs">
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/long_name" target="_blank">long_name</a>&nbsp;=&nbsp;"Longitude"&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#degrees_east" target="_blank">"degrees_east"</a>&nbsp;;
+                                </li>
+                                <li>:grids&nbsp;=&nbsp;"Uniform grid from 0.125 to 359.875 by 0.25"&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/standard_name" target="_blank">standard_name</a>&nbsp;=&nbsp;<a href="http://mmisw.org/ont/cf/parameter/longitude" target="_blank">"longitude"</a>&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/axis" target="_blank">axis</a>&nbsp;=&nbsp;"X"&nbsp;;
+                                </li>
+                            </ul>
+                        </li>
+                        <li>short&nbsp;sst(time, zlev, lat, lon)&nbsp;; // <a href="#global_variable_sst_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
+                            <ul class="collapse in" id="global_variable_sst_attrs">
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/long_name" target="_blank">long_name</a>&nbsp;=&nbsp;"Daily sea surface temperature"&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#degrees_C" target="_blank">"degrees_C"</a>&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/NetCDF/_FillValue" target="_blank">_FillValue</a>&nbsp;=-999s&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/add_offset" target="_blank">add_offset</a>&nbsp;=0.0f&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/scale_factor" target="_blank">scale_factor</a>&nbsp;=0.01f&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/NetCDF/valid_min" target="_blank">valid_min</a>&nbsp;=-300s&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/NetCDF/valid_max" target="_blank">valid_max</a>&nbsp;=4500s&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/standard_name" target="_blank">standard_name</a>&nbsp;=&nbsp;<a href="http://mmisw.org/ont/cf/parameter/sea_surface_temperature" target="_blank">"sea_surface_temperature"</a>&nbsp;;
+                                </li>
+                            </ul>
+                        </li>
+                        <li>short&nbsp;anom(time, zlev, lat, lon)&nbsp;; // <a href="#global_variable_anom_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
+                            <ul class="collapse in" id="global_variable_anom_attrs">
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/long_name" target="_blank">long_name</a>&nbsp;=&nbsp;"Daily sea surface temperature anomalies"&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#degrees C" target="_blank">"degrees C"</a>&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/NetCDF/_FillValue" target="_blank">_FillValue</a>&nbsp;=-999s&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/add_offset" target="_blank">add_offset</a>&nbsp;=0.0f&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/scale_factor" target="_blank">scale_factor</a>&nbsp;=0.01f&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/NetCDF/valid_min" target="_blank">valid_min</a>&nbsp;=-1200s&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/NetCDF/valid_max" target="_blank">valid_max</a>&nbsp;=1200s&nbsp;;
+                                </li>
+                            </ul>
+                        </li>
+                        <li>short&nbsp;err(time, zlev, lat, lon)&nbsp;; // <a href="#global_variable_err_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
+                            <ul class="collapse in" id="global_variable_err_attrs">
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/long_name" target="_blank">long_name</a>&nbsp;=&nbsp;"Estimated error standard deviation of analysed_sst"&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#degrees C" target="_blank">"degrees C"</a>&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/NetCDF/_FillValue" target="_blank">_FillValue</a>&nbsp;=-999s&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/add_offset" target="_blank">add_offset</a>&nbsp;=0.0f&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/scale_factor" target="_blank">scale_factor</a>&nbsp;=0.01f&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/NetCDF/valid_min" target="_blank">valid_min</a>&nbsp;=0s&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/NetCDF/valid_max" target="_blank">valid_max</a>&nbsp;=1000s&nbsp;;
+                                </li>
+                            </ul>
+                        </li>
+                        <li>short&nbsp;ice(time, zlev, lat, lon)&nbsp;; // <a href="#global_variable_ice_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
+                            <ul class="collapse in" id="global_variable_ice_attrs">
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/long_name" target="_blank">long_name</a>&nbsp;=&nbsp;"Sea ice concentration"&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#percentage" target="_blank">"percentage"</a>&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/NetCDF/_FillValue" target="_blank">_FillValue</a>&nbsp;=-999s&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/add_offset" target="_blank">add_offset</a>&nbsp;=0.0f&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/CFTerms/scale_factor" target="_blank">scale_factor</a>&nbsp;=0.01f&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/NetCDF/valid_min" target="_blank">valid_min</a>&nbsp;=0s&nbsp;;
+                                </li>
+                                <li>:<a href="https://def.scitools.org.uk/NetCDF/valid_max" target="_blank">valid_max</a>&nbsp;=100s&nbsp;;
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li/>
+                <li>// global attributes:<a href="#global_attribute_list" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
+                    <ul class="collapse in" id="global_attribute_list">
+                        <li>:<a href="https://def.scitools.org.uk/ACDD/Conventions" target="_blank">Conventions</a>&nbsp;=&nbsp;"CF-1.0"&nbsp;;
+                        </li>
+                        <li>:<a href="https://def.scitools.org.uk/ACDD/title" target="_blank">title</a>&nbsp;=&nbsp;"Daily-OI-V2, final, Data (Ship, Buoy, AVHRR, GSFC-ice)"&nbsp;;
+                        </li>
+                        <li>:History&nbsp;=&nbsp;"Version 2.0"&nbsp;;
+                        </li>
+                        <li>:creation_date&nbsp;=&nbsp;"2011-05-04"&nbsp;;
+                        </li>
+                        <li>:Source&nbsp;=&nbsp;"NOAA/National Climatic Data Center"&nbsp;;
+                        </li>
+                        <li>:Contact&nbsp;=&nbsp;"Dick Reynolds, email: Richard.W.Reynolds@noaa.gov & Chunying Liu, email: Chunying.liu@noaa.gov"&nbsp;;
+                        </li>
+                    </ul>
+                </li>
+            </ul>
             </li>
-            <li>}</li>
         </ul>
+        <p>}</p>
         <script type='text/javascript'>
             $(".btn").click(function () {
                 var curText = $(this).text();
