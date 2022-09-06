@@ -55,9 +55,6 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#examples">Examples</a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="#contribute">Contribute</a>
                     </li>
                 </ul>
@@ -82,565 +79,7 @@
 					<div class="what-is-netcdfld-img">
 					   <img src="img/what-is-netCDF-LD.png"/>
 					</div>
-				    <a class="btn btn-default page-scroll" href="https://github.com/binary-array-ld"><span class="fa fa-github"></span><span class="btn-label">View on Github repo</span></a>
-					<a class="btn btn-default page-scroll" href="#examples">Examples</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="examples" class="examples-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Examples</h1>
-<div>
-
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#cdl" aria-controls="cdl" role="tab" data-toggle="tab">CDL</a></li>
-    <li role="presentation"><a href="#ncld-html" aria-controls="ncld-html" role="tab" data-toggle="tab">ncLD-HTML</a></li>
-    <li role="presentation"><a href="#rdf-turtle" aria-controls="rdf-turtle" role="tab" data-toggle="tab">RDF/Turtle</a></li>
-    <li role="presentation"><a href="#JSON-LD" aria-controls="JSON-LD" role="tab" data-toggle="tab">JSON-LD</a></li>
-  </ul>
-  
-
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active ex-cdl-content" id="cdl">
-	   <p> CDL file: <a href="examples/avhrr-only-v2.19810901_a.txt">examples/avhrr-only-v2.19810901_a.txt</a></p>
-	<pre>
-netcdf avhrr-only-v2.19810901_a {
-dimensions:
-	time = 1 ;
-	zlev = 1 ;
-	lat = 720 ;
-	lon = 1440 ;
-variables:
-	float time(time) ;
-		time:long_name = "Center time of the day" ;
-		time:units = "days since 1978-01-01 00:00:00" ;
-		time:standard_name = "time" ;
-		time:axis = "T" ;
-		time:calendar = "gregorian" ;
-	float zlev(zlev) ;
-		zlev:long_name = "Sea surface height" ;
-		zlev:units = "meters" ;
-		zlev:actual_range = "0, 0" ;
-		zlev:standard_name = "height" ;
-		zlev:axis = "Z" ;
-	float lat(lat) ;
-		lat:long_name = "Latitude" ;
-		lat:units = "degrees_north" ;
-		lat:grids = "Uniform grid from -89.875 to 89.875 by 0.25" ;
-		lat:standard_name = "latitude" ;
-		lat:axis = "Y" ;
-	float lon(lon) ;
-		lon:long_name = "Longitude" ;
-		lon:units = "degrees_east" ;
-		lon:grids = "Uniform grid from 0.125 to 359.875 by 0.25" ;
-		lon:standard_name = "longitude" ;
-		lon:axis = "X" ;
-	short sst(time, zlev, lat, lon) ;
-		sst:long_name = "Daily sea surface temperature" ;
-		sst:units = "degrees_C" ;
-		sst:_FillValue = -999s ;
-		sst:add_offset = 0.f ;
-		sst:scale_factor = 0.01f ;
-		sst:valid_min = -300s ;
-		sst:valid_max = 4500s ;
-		sst:standard_name = "sea_surface_temperature" ;
-	short anom(time, zlev, lat, lon) ;
-		anom:long_name = "Daily sea surface temperature anomalies" ;
-		anom:units = "degrees C" ;
-		anom:_FillValue = -999s ;
-		anom:add_offset = 0.f ;
-		anom:scale_factor = 0.01f ;
-		anom:valid_min = -1200s ;
-		anom:valid_max = 1200s ;
-	short err(time, zlev, lat, lon) ;
-		err:long_name = "Estimated error standard deviation of analysed_sst" ;
-		err:units = "degrees C" ;
-		err:_FillValue = -999s ;
-		err:add_offset = 0.f ;
-		err:scale_factor = 0.01f ;
-		err:valid_min = 0s ;
-		err:valid_max = 1000s ;
-	short ice(time, zlev, lat, lon) ;
-		ice:long_name = "Sea ice concentration" ;
-		ice:units = "percentage" ;
-		ice:_FillValue = -999s ;
-		ice:add_offset = 0.f ;
-		ice:scale_factor = 0.01f ;
-		ice:valid_min = 0s ;
-		ice:valid_max = 100s ;
-
-// global attributes:
-		:Conventions = "CF-1.0" ;
-		:title = "Daily-OI-V2, final, Data (Ship, Buoy, AVHRR, GSFC-ice)" ;
-		:History = "Version 2.0" ;
-		:creation_date = "2011-05-04" ;
-		:Source = "NOAA/National Climatic Data Center" ;
-		:Contact = "Dick Reynolds, email: Richard.W.Reynolds@noaa.gov & Chunying Liu, email: Chunying.liu@noaa.gov" ;
-}
-</pre>
-	   
-	</div>
-    
-	<div role="tabpanel" class="tab-pane" id="ncld-html">
-	   <h4> Rendered hotlinks from ncld-dump tool </h4>
-	   <p> ncLD HTML file: <a href="examples/avhrr-only-v2.19810901_a.html">examples/avhrr-only-v2.19810901_a.html</a></p>
-
-	   <hr>
-        <p>netcdf avhrr-only-v2.19810901_a.nc {</p>
-        <ul>
-            <li>
-            <ul class="collapse in" id="group_global">
-                <li>dimensions: // <a href="#global_dimensions_list" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                    <ul class="collapse in" id="global_dimensions_list">
-                        <li>time&nbsp;=&nbsp;1 ;</li>
-                        <li>zlev&nbsp;=&nbsp;1 ;</li>
-                        <li>lat&nbsp;=&nbsp;720 ;</li>
-                        <li>lon&nbsp;=&nbsp;1440 ;</li>
-                    </ul>
-                </li>
-                <li>variables: // <a href="#global_variables_list" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                    <ul class="collapse in" id="global_variables_list">
-                        <li>float&nbsp;time(time)&nbsp;; // <a href="#global_variable_time_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                            <ul class="collapse in" id="global_variable_time_attrs">
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/long_name" target="_blank">long_name</a>&nbsp;=&nbsp;"Center time of the day"&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#days since 1978-01-01 00:00:00" target="_blank">"days since 1978-01-01 00:00:00"</a>&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/standard_name" target="_blank">standard_name</a>&nbsp;=&nbsp;<a href="http://mmisw.org/ont/cf/parameter/time" target="_blank">"time"</a>&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/axis" target="_blank">axis</a>&nbsp;=&nbsp;"T"&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/calendar" target="_blank">calendar</a>&nbsp;=&nbsp;"gregorian"&nbsp;;
-                                </li>
-                            </ul>
-                        </li>
-                        <li>float&nbsp;zlev(zlev)&nbsp;; // <a href="#global_variable_zlev_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                            <ul class="collapse in" id="global_variable_zlev_attrs">
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/long_name" target="_blank">long_name</a>&nbsp;=&nbsp;"Sea surface height"&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#meters" target="_blank">"meters"</a>&nbsp;;
-                                </li>
-                                <li>:actual_range&nbsp;=&nbsp;"0, 0"&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/standard_name" target="_blank">standard_name</a>&nbsp;=&nbsp;<a href="http://mmisw.org/ont/cf/parameter/height" target="_blank">"height"</a>&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/axis" target="_blank">axis</a>&nbsp;=&nbsp;"Z"&nbsp;;
-                                </li>
-                            </ul>
-                        </li>
-                        <li>float&nbsp;lat(lat)&nbsp;; // <a href="#global_variable_lat_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                            <ul class="collapse in" id="global_variable_lat_attrs">
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/long_name" target="_blank">long_name</a>&nbsp;=&nbsp;"Latitude"&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#degrees_north" target="_blank">"degrees_north"</a>&nbsp;;
-                                </li>
-                                <li>:grids&nbsp;=&nbsp;"Uniform grid from -89.875 to 89.875 by 0.25"&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/standard_name" target="_blank">standard_name</a>&nbsp;=&nbsp;<a href="http://mmisw.org/ont/cf/parameter/latitude" target="_blank">"latitude"</a>&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/axis" target="_blank">axis</a>&nbsp;=&nbsp;"Y"&nbsp;;
-                                </li>
-                            </ul>
-                        </li>
-                        <li>float&nbsp;lon(lon)&nbsp;; // <a href="#global_variable_lon_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                            <ul class="collapse in" id="global_variable_lon_attrs">
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/long_name" target="_blank">long_name</a>&nbsp;=&nbsp;"Longitude"&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#degrees_east" target="_blank">"degrees_east"</a>&nbsp;;
-                                </li>
-                                <li>:grids&nbsp;=&nbsp;"Uniform grid from 0.125 to 359.875 by 0.25"&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/standard_name" target="_blank">standard_name</a>&nbsp;=&nbsp;<a href="http://mmisw.org/ont/cf/parameter/longitude" target="_blank">"longitude"</a>&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/axis" target="_blank">axis</a>&nbsp;=&nbsp;"X"&nbsp;;
-                                </li>
-                            </ul>
-                        </li>
-                        <li>short&nbsp;sst(time, zlev, lat, lon)&nbsp;; // <a href="#global_variable_sst_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                            <ul class="collapse in" id="global_variable_sst_attrs">
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/long_name" target="_blank">long_name</a>&nbsp;=&nbsp;"Daily sea surface temperature"&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#degrees_C" target="_blank">"degrees_C"</a>&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/NetCDF/_FillValue" target="_blank">_FillValue</a>&nbsp;=-999s&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/add_offset" target="_blank">add_offset</a>&nbsp;=0.0f&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/scale_factor" target="_blank">scale_factor</a>&nbsp;=0.01f&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/NetCDF/valid_min" target="_blank">valid_min</a>&nbsp;=-300s&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/NetCDF/valid_max" target="_blank">valid_max</a>&nbsp;=4500s&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/standard_name" target="_blank">standard_name</a>&nbsp;=&nbsp;<a href="http://mmisw.org/ont/cf/parameter/sea_surface_temperature" target="_blank">"sea_surface_temperature"</a>&nbsp;;
-                                </li>
-                            </ul>
-                        </li>
-                        <li>short&nbsp;anom(time, zlev, lat, lon)&nbsp;; // <a href="#global_variable_anom_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                            <ul class="collapse in" id="global_variable_anom_attrs">
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/long_name" target="_blank">long_name</a>&nbsp;=&nbsp;"Daily sea surface temperature anomalies"&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#degrees C" target="_blank">"degrees C"</a>&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/NetCDF/_FillValue" target="_blank">_FillValue</a>&nbsp;=-999s&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/add_offset" target="_blank">add_offset</a>&nbsp;=0.0f&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/scale_factor" target="_blank">scale_factor</a>&nbsp;=0.01f&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/NetCDF/valid_min" target="_blank">valid_min</a>&nbsp;=-1200s&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/NetCDF/valid_max" target="_blank">valid_max</a>&nbsp;=1200s&nbsp;;
-                                </li>
-                            </ul>
-                        </li>
-                        <li>short&nbsp;err(time, zlev, lat, lon)&nbsp;; // <a href="#global_variable_err_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                            <ul class="collapse in" id="global_variable_err_attrs">
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/long_name" target="_blank">long_name</a>&nbsp;=&nbsp;"Estimated error standard deviation of analysed_sst"&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#degrees C" target="_blank">"degrees C"</a>&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/NetCDF/_FillValue" target="_blank">_FillValue</a>&nbsp;=-999s&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/add_offset" target="_blank">add_offset</a>&nbsp;=0.0f&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/scale_factor" target="_blank">scale_factor</a>&nbsp;=0.01f&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/NetCDF/valid_min" target="_blank">valid_min</a>&nbsp;=0s&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/NetCDF/valid_max" target="_blank">valid_max</a>&nbsp;=1000s&nbsp;;
-                                </li>
-                            </ul>
-                        </li>
-                        <li>short&nbsp;ice(time, zlev, lat, lon)&nbsp;; // <a href="#global_variable_ice_attrs" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                            <ul class="collapse in" id="global_variable_ice_attrs">
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/long_name" target="_blank">long_name</a>&nbsp;=&nbsp;"Sea ice concentration"&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/units" target="_blank">units</a>&nbsp;=&nbsp;<a href="https://ncics.org/portfolio/other-resources/udunits2/#percentage" target="_blank">"percentage"</a>&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/NetCDF/_FillValue" target="_blank">_FillValue</a>&nbsp;=-999s&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/add_offset" target="_blank">add_offset</a>&nbsp;=0.0f&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/CFTerms/scale_factor" target="_blank">scale_factor</a>&nbsp;=0.01f&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/NetCDF/valid_min" target="_blank">valid_min</a>&nbsp;=0s&nbsp;;
-                                </li>
-                                <li>:<a href="https://def.scitools.org.uk/NetCDF/valid_max" target="_blank">valid_max</a>&nbsp;=100s&nbsp;;
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li/>
-                <li>// global attributes:<a href="#global_attribute_list" class="btn btn-default btn-xs" data-toggle="collapse" altText="&darr;">&uarr;</a>
-                    <ul class="collapse in" id="global_attribute_list">
-                        <li>:<a href="https://def.scitools.org.uk/ACDD/Conventions" target="_blank">Conventions</a>&nbsp;=&nbsp;"CF-1.0"&nbsp;;
-                        </li>
-                        <li>:<a href="https://def.scitools.org.uk/ACDD/title" target="_blank">title</a>&nbsp;=&nbsp;"Daily-OI-V2, final, Data (Ship, Buoy, AVHRR, GSFC-ice)"&nbsp;;
-                        </li>
-                        <li>:History&nbsp;=&nbsp;"Version 2.0"&nbsp;;
-                        </li>
-                        <li>:creation_date&nbsp;=&nbsp;"2011-05-04"&nbsp;;
-                        </li>
-                        <li>:Source&nbsp;=&nbsp;"NOAA/National Climatic Data Center"&nbsp;;
-                        </li>
-                        <li>:Contact&nbsp;=&nbsp;"Dick Reynolds, email: Richard.W.Reynolds@noaa.gov & Chunying Liu, email: Chunying.liu@noaa.gov"&nbsp;;
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            </li>
-        </ul>
-        <p>}</p>
-	</div>
-    
-  	<div role="tabpanel" class="tab-pane" id="rdf-turtle">
-	   <p> RDF encoding (output of <a href="https://github.com/binary-array-ld/bald/tree/master/nc2rdf">nc2rdf</a>)</p>
-	<pre>
-@prefix bald: &lt;http://binary-array-ld.net/latest/&gt; .
-@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
-@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
-@prefix this: &lt;file:///tmp/tmpyt4n_hzw.nc/&gt; .
-@prefix xml: &lt;http://www.w3.org/XML/1998/namespace&gt; .
-@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
-
-&lt;file:///tmp/tmpyt4n_hzw.nc&gt; a bald:Container ;
-    this:Contact &quot;Dick Reynolds, email: Richard.W.Reynolds@noaa.gov &amp; Chunying Liu, email: Chunying.liu@noaa.gov&quot; ;
-    this:Conventions &quot;CF-1.0&quot; ;
-    this:History &quot;Version 2.0&quot; ;
-    this:Source &quot;NOAA/National Climatic Data Center&quot; ;
-    this:creation_date &quot;2011-05-04&quot; ;
-    this:title "Daily-OI-V2, final, Data (Ship, Buoy, AVHRR, GSFC-ice)" ;
-    bald:contains this:anom,
-        this:anom_lat_ref,
-        this:anom_time_ref,
-        this:anom_zlev_ref,
-        this:err,
-        this:err_lat_ref,
-        this:err_time_ref,
-        this:err_zlev_ref,
-        this:ice,
-        this:ice_lat_ref,
-        this:ice_time_ref,
-        this:ice_zlev_ref,
-        this:lat,
-        this:lon,
-        this:sst,
-        this:sst_lat_ref,
-        this:sst_time_ref,
-        this:sst_zlev_ref,
-        this:time,
-        this:zlev .
-
-this:anom a bald:Array ;
-    this:_FillValue "-999" ;
-    this:add_offset "0.0" ;
-    this:long_name "Daily sea surface temperature anomalies" ;
-    this:scale_factor "0.01" ;
-    this:units "degrees C" ;
-    this:valid_max "1200" ;
-    this:valid_min "-1200" ;
-    bald:references this:anom_lat_ref,
-        this:anom_time_ref,
-        this:anom_zlev_ref,
-        this:lon ;
-    bald:shape "(1, 1, 720, 1440)" .
-
-this:err a bald:Array ;
-    this:_FillValue "-999" ;
-    this:add_offset "0.0" ;
-    this:long_name "Estimated error standard deviation of analysed_sst" ;
-    this:scale_factor "0.01" ;
-    this:units "degrees C" ;
-    this:valid_max "1000" ;
-    this:valid_min "0" ;
-    bald:references this:err_lat_ref,
-        this:err_time_ref,
-        this:err_zlev_ref,
-        this:lon ;
-    bald:shape "(1, 1, 720, 1440)" .
-
-this:ice a bald:Array ;
-    this:_FillValue "-999" ;
-    this:add_offset "0.0" ;
-    this:long_name "Sea ice concentration" ;
-    this:scale_factor "0.01" ;
-    this:units "percentage" ;
-    this:valid_max "100" ;
-    this:valid_min "0" ;
-    bald:references this:ice_lat_ref,
-        this:ice_time_ref,
-        this:ice_zlev_ref,
-        this:lon ;
-    bald:shape "(1, 1, 720, 1440)" .
-
-this:sst a bald:Array ;
-    this:_FillValue "-999" ;
-    this:add_offset "0.0" ;
-    this:long_name "Daily sea surface temperature" ;
-    this:scale_factor "0.01" ;
-    this:standard_name "sea_surface_temperature" ;
-    this:units "degrees_C" ;
-    this:valid_max "4500" ;
-    this:valid_min "-300" ;
-    bald:references this:lon,
-        this:sst_lat_ref,
-        this:sst_time_ref,
-        this:sst_zlev_ref ;
-    bald:shape "(1, 1, 720, 1440)" .
-
-this:anom_lat_ref a bald:Reference,
-        bald:Subject ;
-    bald:array this:lat ;
-    bald:childBroadcast "(1, 1, 720, 1)" .
-
-this:anom_time_ref a bald:Reference,
-        bald:Subject ;
-    bald:array this:time ;
-    bald:childBroadcast "(1, 1, 1, 1)" .
-
-this:anom_zlev_ref a bald:Reference,
-        bald:Subject ;
-    bald:array this:zlev ;
-    bald:childBroadcast "(1, 1, 1, 1)" .
-
-this:err_lat_ref a bald:Reference,
-        bald:Subject ;
-    bald:array this:lat ;
-    bald:childBroadcast "(1, 1, 720, 1)" .
-
-this:err_time_ref a bald:Reference,
-        bald:Subject ;
-    bald:array this:time ;
-    bald:childBroadcast "(1, 1, 1, 1)" .
-
-this:err_zlev_ref a bald:Reference,
-        bald:Subject ;
-    bald:array this:zlev ;
-    bald:childBroadcast "(1, 1, 1, 1)" .
-
-this:ice_lat_ref a bald:Reference,
-        bald:Subject ;
-    bald:array this:lat ;
-    bald:childBroadcast "(1, 1, 720, 1)" .
-
-this:ice_time_ref a bald:Reference,
-        bald:Subject ;
-    bald:array this:time ;
-    bald:childBroadcast "(1, 1, 1, 1)" .
-
-this:ice_zlev_ref a bald:Reference,
-        bald:Subject ;
-    bald:array this:zlev ;
-    bald:childBroadcast "(1, 1, 1, 1)" .
-
-this:sst_lat_ref a bald:Reference,
-        bald:Subject ;
-    bald:array this:lat ;
-    bald:childBroadcast "(1, 1, 720, 1)" .
-
-this:sst_time_ref a bald:Reference,
-        bald:Subject ;
-    bald:array this:time ;
-    bald:childBroadcast "(1, 1, 1, 1)" .
-
-this:sst_zlev_ref a bald:Reference,
-        bald:Subject ;
-    bald:array this:zlev ;
-    bald:childBroadcast "(1, 1, 1, 1)" .
-
-this:lat a bald:Array,
-        bald:Reference ;
-    this:axis "Y" ;
-    this:grids "Uniform grid from -89.875 to 89.875 by 0.25" ;
-    this:long_name "Latitude" ;
-    this:standard_name "latitude" ;
-    this:units "degrees_north" ;
-    bald:array this:lat ;
-    bald:first_value 9.969209968386869e+36 ;
-    bald:last_value 9.969209968386869e+36 ;
-    bald:shape "(720,)" .
-
-this:lon a bald:Array,
-        bald:Reference ;
-    this:axis "X" ;
-    this:grids "Uniform grid from 0.125 to 359.875 by 0.25" ;
-    this:long_name "Longitude" ;
-    this:standard_name "longitude" ;
-    this:units "degrees_east" ;
-    bald:array this:lon ;
-    bald:first_value 9.969209968386869e+36 ;
-    bald:last_value 9.969209968386869e+36 ;
-    bald:shape "(1440,)" .
-
-this:zlev a bald:Array,
-        bald:Reference ;
-    this:actual_range "0, 0" ;
-    this:axis "Z" ;
-    this:long_name "Sea surface height" ;
-    this:standard_name "height" ;
-    this:units "meters" ;
-    bald:array this:zlev ;
-    bald:first_value 9.969209968386869e+36 ;
-    bald:shape "(1,)" .
-
-this:time a bald:Array,
-        bald:Reference ;
-    this:axis "T" ;
-    this:calendar "gregorian" ;
-    this:long_name "Center time of the day" ;
-    this:standard_name this:time ;
-    this:units "days since 1978-01-01 00:00:00" ;
-    bald:array this:time ;
-    bald:first_value 9.969209968386869e+36 ;
-    bald:shape "(1,)" .
-
-</pre>
-	</div>
-	
-	<div role="tabpanel" class="tab-pane" id="JSON-LD">
-	   <p> JSON-LD encoding (draft status)</p>
-	<pre>
-{
-  "@context": {
-    "dc": "http://purl.org/dc/elements/1.1/",
-    "ex": "http://example.org/vocab#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "ncld": "http://binary-array-ld.net/latest/",
-    "cf": "http://cf-conventions.org/def/1.6.0/",
-    "acdd": "http://www.unidata.ucar.edu/netcdf/def/acdd/1.0/"
-  },
-  "@graph": [
-    {
-      "@type": "ncld:Container",
-      "ncld:contains": [
-        {
-          "@id": "_:sst"
-        },
-        {
-          "@id": "_:anom"
-        },
-        {
-          "@id": "_:err"
-        },
-        {
-          "@id": "_:ice"
-        }
-      ],
-      "acdd:Conventions": "CF-1.0",
-      "acdd:title": "Daily-OI-V2, final, Data (Ship, Buoy, AVHRR, GSFC-ice)"
-    },
-    {
-      "@id": "_:sst",
-      "@type": "ncld:Array",
-      "cf:long_name": "Daily sea surface temperature",
-      "cf:standard_name": {
-        "@id": "http://mmisw.org/ont/cf/parameter/sea_surface_temperature"
-      },
-      "cf:units": "degrees_C",
-      "cf:valid_max": "4500s",
-      "cf:valid_min": "-300s",
-      "http://www.w3.org/2000/01/rdf-schema#label": "Daily sea surface temperature"
-    },
-    {
-      "@id": "_:anom",
-      "@type": "ncld:Array",
-      "cf:long_name": "Daily sea surface temperature anomalies",
-      "cf:units": "degrees C",
-      "cf:valid_max": "1200s",
-      "cf:valid_min": "-1200s"
-    },
-    {
-      "@id": "_:err",
-      "@type": "ncld:Array",
-      "cf:long_name": "Estimated error standard deviation of analysed_sst",
-      "cf:units": "degrees C",
-      "cf:valid_max": "1000s",
-      "cf:valid_min": "0s"
-    },
-    {
-      "@id": "_:ice",
-      "@type": "ncld:Array",
-      "cf:long_name": "Sea ice concentration",
-      "cf:units": "percentage",
-      "cf:valid_max": "100s",
-      "cf:valid_min": "0s"
-    }
-  ]
-}
-</pre>
-	</div>
-  </div>
-
-</div>
+	   			        <a class="btn btn-default page-scroll" href="https://github.com/opengeospatial/netcdf-ld"><span class="fa fa-github"></span><span class="btn-label">View the OGC standard on Github repo</span></a>
                 </div>
             </div>
         </div>
@@ -652,7 +91,7 @@ this:time a bald:Array,
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Getting help / Collaborating</h1>
-					<p> netCDF-LD is being developed by the a working group consisting of members of CSIRO, UK Met Office, NOAA, NCI, Geoscience Australia and others. The working group is contributing to a stream of activity under the <a href="https://www.earthcube.org/content/advancing-netcdf-cf-geoscience-community">Advancing netCDF-CF for the Geoscience Community</a>. Participation is open to the public. There is a set of relevant Github repositories and is the main collaboration site for this work. </p>
+					<p> netCDF-LD is being developed as part of the OGC netCDF SWG. This activity contributed to the Earthcube <a href="https://www.earthcube.org/content/advancing-netcdf-cf-geoscience-community">Advancing netCDF-CF for the Geoscience Community</a>. Contributions to netCDF-LD is open to the public. There is a set of relevant Github repositories listed below for this work. </p>
 											<br/><br/>
 
 				</div>
@@ -662,14 +101,19 @@ this:time a bald:Array,
                 <div class="col-lg-6">
             		<div class="panel panel-default collaboration-github-panel ">
 					  <div class="panel-heading">
-						<h3 class="panel-title">Binary-array Linked Data tools</h3>
+						<h3 class="panel-title">Related tools</h3>
 					  </div>
 					  <div class="panel-body">
-						Github repository for Binary-array Linked Data tools. The code hosted on this repository intends to feature Linked Data tools and libraries for 
-						interacting with netCDF and HDF formats.
+						Github repository for related tools. The code hosted on this repository intends to feature Linked Data tools and libraries for 
+						interacting with netCDF.
 						<br/><br/>
 						    
-							<a class="btn btn-default page-scroll" href="https://github.com/binary-array-ld/bald/"><span class="fa fa-github"></span><span class="btn-label">View on Github repo</span></a>
+							<a class="btn btn-default page-scroll" href="https://github.com/binary-array-ld/bald/">
+								<span class="fa fa-github"></span><span class="btn-label">Python implementation</span>
+							</a>
+							<a class="btn btn-default page-scroll" href="https://github.com/binary-array-ld/net.binary_array_ld.bald">
+								<span class="fa fa-github"></span><span class="btn-label">Kotlin (JVM) implementation</span>
+							</a>
 						<br/>
 					  </div>
 					</div>
@@ -678,12 +122,12 @@ this:time a bald:Array,
 			    <div class="col-lg-6">
             		<div class="panel panel-default collaboration-github-panel ">
 					  <div class="panel-heading">
-						<h3 class="panel-title">OGC netCDF-Classic-LD specs (draft)</h3>
+						<h3 class="panel-title">OGC netCDF-LD specs</h3>
 					  </div>
 					  <div class="panel-body">
-						Github repository for NetCDF Classic Standard for Encoding RDF Graphs netCDF-Classic-LD netCDF-LD.
+						Github repository for netCDF-LD Standard for Encoding RDF Graphs.
 						<br/><br/>
-						<a class="btn btn-default page-scroll" href="https://github.com/opengeospatial/netCDF-Classic-LD/"><span class="fa fa-github"></span><span class="btn-label">View on Github repo</span></a>
+						<a class="btn btn-default page-scroll" href="https://github.com/opengeospatial/netcdf-ld"><span class="fa fa-github"></span><span class="btn-label">View on Github repo</span></a>
 						<a class="btn btn-default page-scroll" href="http://www.opengeospatial.org/projects/groups/netcdfswg"><span class="fa fa-github"></span><span class="btn-label">OGC netCDF SWG</span></a>
 					  </div>
 					</div>
@@ -694,9 +138,8 @@ this:time a bald:Array,
             <div class="row" style="padding-top:50px">
 			    <div class="col-lg-12">
 					<h3>Credits</h3>
-					<p>(Alphabetical order) Jim Biard (NOAA), Nicholas Car (GA), Simon Cox (CSIRO),  Ethan Davis (UCAR), Kelsey Druken (NCI), Mark Hedley (UK Met. Office), 
-					Alex Ip (GA), Adam Leadbetter (Marine Inst.), Jonathan Yu (CSIRO)</p>
-					<p> Acknowledgements to those who contributed: Stefano Nativi, and Aaron Sweeney.
+					<p> Editors: Mark Hedley, Jonathan Yu.</p>
+					<p> Acknowledgements to those who contributed: Jim Biard, Nicholas Car, Simon Cox,  Ethan Davis, Kelsey Druken, Alex Ip, Adam Leadbetter, Stefano Nativi, Aaron Sweeney.</p>
 				</div>
 			</div>
         </div>
